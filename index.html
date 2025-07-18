@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fast Meals - Landing</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Font Awesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header class="navbar">
+      <h1>FastMeals</h1>
+
+      <button
+        class="hamburger"
+        id="hamburgerBtn"
+        aria-label="Toggle navigation"
+      >
+        <i class="fa-solid fa-bars" style="color: #ffffff"></i>
+      </button>
+
+      <nav id="navLinks">
+        <a href="#services">Services</a>
+        <a href="#why">Why Us</a>
+        <a href="#form">Join</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="hero-content fade-in">
+        <h2>
+          Affordable Meals Delivered to Your Door in Under <br /><span style="color: #d83738;">30</span> Minutes
+        </h2>
+        <a href="#form" class="cta-btn"
+          >Join the Waitlist <i class="fa-solid fa-list-ul"></i
+        ></a>
+      </div>
+    </section>
+
+    <section class="intro fade-up">
+      <h3>About Us</h3>
+      <p>
+        We’re testing a fast, low-cost food delivery service starting in
+        <strong>NIGERIA</strong>. If you’re a student or busy worker, this is
+        for you.
+      </p>
+    </section>
+
+    <section class="services" id="services">
+      <h3>Services We Offer</h3>
+      <div class="service-card">
+        <div class="image-card">
+          <img
+            src="img/quick-chicken-and-hummus-bowl-220e449.webp"
+            alt="Delicious Meal"
+          />
+          <div class="card-content">
+            <h5>Daily lunch delivery (₦500 meals)</h5>
+            <p>
+              Hot, tasty meals delivered straight to your location every day —
+              fast, filling, and affordable for any budget.
+            </p>
+            <button>Order Now</button>
+          </div>
+        </div>
+
+        <div class="image-card">
+          <img
+            src="img/quick-chicken-and-hummus-bowl-220e449.webp"
+            alt="Delicious Meal"
+          />
+          <div class="card-content">
+            <h5>Grocery delivery (market runs)</h5>
+            <p>
+              Grocery Delivery (Market Runs) Skip the stress of the market. We
+              hand-pick and deliver fresh groceries right to your door.
+            </p>
+            <button>Order Now</button>
+          </div>
+        </div>
+        <div class="image-card">
+          <img
+            src="img/quick-chicken-and-hummus-bowl-220e449.webp"
+            alt="Delicious Meal"
+          />
+          <div class="card-content">
+            <h5>Party food pre-orders</h5>
+            <p>
+              Hosting an event? We handle the food. Place your order ahead of
+              time and we’ll deliver party-ready meals with zero hassle.
+            </p>
+            <button>Order Now</button>
+          </div>
+        </div>
+        <div class="image-card">
+          <img
+            src="img/quick-chicken-and-hummus-bowl-220e449.webp"
+            alt="Delicious Meal"
+          />
+          <div class="card-content">
+            <h5>Campus meal subscriptions</h5>
+            <p>
+              Students, this one’s for you! Subscribe weekly or monthly and get
+              guaranteed meals delivered on schedule — no more missed lunches.
+            </p>
+            <button>Order Now</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="benefits fade-up" id="why">
+      <h3>Why Choose Us?</h3>
+      <div class="benefit-list">
+        <div class="benefit-card">
+          <i class="fas fa-money-bill-wave fa-flip"></i>
+          <p>Pay with cash or transfer</p>
+        </div>
+        <div class="benefit-card">
+          <i class="fas fa-shipping-fast fa-shake"></i>
+          <p>Delivery under 30 mins</p>
+        </div>
+        <div class="benefit-card">
+          <i class="fas fa-clock fa-spin"></i>
+          <p>Available 9am – 8pm</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="form-section" id="form">
+      <h3>Join the Waitlist</h3>
+      <form id="waitlistForm">
+        <input type="text" placeholder="Your Name" required />
+        <input type="email" placeholder="Your Email" required />
+        <input type="text" placeholder="Your Location" required />
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+
+    <footer>
+      <p>
+        &copy; 2025 FastMeals || design by
+        <a
+          href="https://instagram.com/yousufxxo/"
+          target="_blank"
+          style="color: #d83738"
+          >Xxo</a
+        >
+      </p>
+      <div class="socials">
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </footer>
+
+    <script>
+      // Optionally trigger fade-up when in view
+      window.addEventListener("scroll", () => {
+        document.querySelectorAll(".fade-up").forEach((el) => {
+          const rect = el.getBoundingClientRect();
+          if (rect.top < window.innerHeight - 100) {
+            el.style.animationPlayState = "running";
+          }
+        });
+      });
+
+      // Mobile menu toggle
+      const hamburgerBtn = document.getElementById("hamburgerBtn");
+      const navLinks = document.getElementById("navLinks");
+
+      hamburgerBtn.addEventListener("click", () => {
+        navLinks.classList.toggle("show");
+      });
+    </script>
+  </body>
+</html>
